@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+title: EleventyはNunjucksテンプレートが使える
+authors:
+  - name: ParkerCatz
+    title: 猫が好き
+  - name: TEST
+    title: フロントエンド・エンジニア
+---
+
+<h1>{{ title }}</h1>
+<div>名前：{{authors[0].name}}</div>
+<div>タイトル：{{authors[0].title}}</div>
+<ul>
+{% for author in authors %}
+    <li>{{ author.name }}</li>
+    <li>{{ author.title }}</li>
+{% else %}
+    <li>いません</li>
+{% endfor %}
+</ul>
